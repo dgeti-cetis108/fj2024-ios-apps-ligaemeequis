@@ -1,14 +1,21 @@
-﻿namespace LigaMx;
+﻿
+namespace LigaMx;
 
 public class Program
 {
+    public static List<Equipo> Equipos = new();
     static void Main(string[] args)
     {
-        var elAme = crearEquipoAmerica();
-        Console.WriteLine(elAme);
+        crearEquipoAmerica();
+        crearEquipoNecaxa();
     }
 
-    private static Equipo crearEquipoAmerica()
+    private static void crearEquipoNecaxa()
+    {
+        throw new NotImplementedException();
+    }
+
+    private static void crearEquipoAmerica()
     {
         var america = new Equipo();
         america.Nombre = "Club América";
@@ -40,7 +47,7 @@ public class Program
         america.Jugadores.Add(new Jugador { Nombres = "Ramon", Apellidos = "Juarez", Número = 29 });
         america.Jugadores.Add(new Jugador { Nombres = "Luis", Apellidos = "Fuentes", Número = 33 });
 
-        return america;
+        Equipos.Add(america);
     }
 }
 
