@@ -20,14 +20,21 @@ public class Program
 
     private static void crearJornada1()
     {
-        Rol.Add(new Partido {Fecha=new DateTime(2024,01,14)...});
+        Rol.Add(new Partido
+        {
+            Fecha = new DateTime(2024, 01, 14),
+            Jornada = 1,
+            EquipoA = Equipos[0],
+            EquipoB = Equipos[1],
+            EquipoAEsCasa = true
+        });
     }
 
     private static void definirNuevoTorneo()
     {
         Apertura2024.Año = 2024;
-        Apertura2024.Inicio = new DateTime(2024,01,14);
-        Apertura2024.Fin = new DateTime(2024,05,26);
+        Apertura2024.Inicio = new DateTime(2024, 01, 14);
+        Apertura2024.Fin = new DateTime(2024, 05, 26);
         Apertura2024.Equipos = Equipos;
     }
 
